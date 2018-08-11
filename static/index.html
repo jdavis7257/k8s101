@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Hello Crazy World</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>Hello World from kubernetes!</h1>
+        <ul class="comments">
+            <li class="comment" v-for="comment in comments">
+                {{comment.Message}}
+            </li>
+        </ul>
+        <div>
+            <form>
+                <label for="commentText">Enter Comment:</label>
+                <textarea id="commentText" v-model="newCommentText"></textarea>
+                <button v-on:click="postData()">Add Comment</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
